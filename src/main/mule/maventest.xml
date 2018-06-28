@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="6257cd6d-cb90-4dd0-a13b-36a8e4003844" >
+		<http:listener-connection host="0.0.0.0" port="8082" />
+	</http:listener-config>
+	<flow name="maventestFlow" doc:id="620ba060-b0fd-4cdb-a10c-94d8df924501" >
+		<http:listener doc:name="Listener" doc:id="39d51698-6148-4858-8066-6ef9c5ba6627" config-ref="HTTP_Listener_config" path="/AZConnect"/>
+		<set-payload value="AZConnect123" doc:name="Set Payload" doc:id="d71c7689-7f60-49d7-a9f7-c8d586e67f3a" />
+	</flow>
+</mule>

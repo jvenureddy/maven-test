@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="maven-test-Munittestsuite.xml" />
+	<munit:test name="maven-test-Munittestsuite-maventestFlowTest" description="Test" doc:id="07e73fc7-5e5c-458a-b095-f57e2d5e5054" >
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to maventestFlow" doc:id="aca3333a-307f-46e4-9e68-d59b9e29cff3" name="maventestFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="f8b74272-6e43-4eda-8982-c6b62428a227" expression="!=" is="AZConnect123" message="Invalid"/>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
