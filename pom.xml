@@ -80,6 +80,12 @@
             <classifier>mule-plugin</classifier>
             <scope>test</scope>
         </dependency>
+    	<dependency>
+            <groupId>com.mulesoft.connectors</groupId>
+            <artifactId>mule-salesforce-connector</artifactId>
+            <version>9.2.1</version>
+            <classifier>mule-plugin</classifier>
+        </dependency>
     </dependencies>
 
 	<repositories>
